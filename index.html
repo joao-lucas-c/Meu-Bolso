@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Minhas Finanças</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>💜 Minhas Finanças</h1>
+    <div class="mes"><button id="ant" aria-label="Mês anterior">‹</button><span id="mesLabel"></span><button id="prox" aria-label="Próximo mês">›</button></div>
+  </div>
+
+  <div class="hero" id="hero">
+    <small>Saldo do mês</small>
+    <div class="big" id="saldo">R$ 0,00</div>
+    <div class="duo">
+      <div><small>⬆ Entrou</small><b id="tIn">R$ 0,00</b></div>
+      <div><small>⬇ Saiu</small><b id="tOut">R$ 0,00</b></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Novo lançamento</h2>
+    <div class="seg">
+      <button class="s on" id="bS">Saída · gastei</button>
+      <button class="e" id="bE">Entrada · recebi</button>
+    </div>
+
+    <label style="text-align:center">Quanto foi?</label>
+    <div class="money" id="money"><span>R$</span><input id="valor" type="text" inputmode="numeric" placeholder="0,00" autocomplete="off"></div>
+
+    <label>Categoria</label>
+    <div class="chips" id="chips"></div>
+
+    <div class="f">
+      <div><label for="data">Data</label><input class="t" id="data" type="date"></div>
+      <div><label for="desc">Descrição (opcional)</label><input class="t" id="desc" placeholder="Ex: Uber da faculdade"></div>
+    </div>
+    <button class="add" id="addBtn">Adicionar</button>
+    <div class="err" id="err"></div>
+  </div>
+
+  <div class="card">
+    <h2>Para onde vai meu dinheiro</h2>
+    <div class="donutbox">
+      <div class="donut" id="donut"><i><b id="dTot">R$ 0</b>gastos</i></div>
+      <div class="cats" id="cats"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Lançamentos do mês</h2>
+    <div id="lista"></div>
+  </div>
+
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
